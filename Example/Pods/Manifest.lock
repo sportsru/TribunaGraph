@@ -1,0 +1,16 @@
+PODS:
+  - TribunaGraph (0.1.0)
+
+DEPENDENCIES:
+  - TribunaGraph (from `../`)
+
+EXTERNAL SOURCES:
+  TribunaGraph:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TribunaGraph: 6f492eb9cfd5b44e8c3ccd41ef5fe23395dde7e8
+
+PODFILE CHECKSUM: b1c2d9d004bbf31526a6c2f737dbe4a86eec417c
+
+COCOAPODS: 1.7.3

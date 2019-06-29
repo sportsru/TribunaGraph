@@ -1,0 +1,22 @@
+{
+  "name": "TribunaGraph",
+  "version": "0.1.0",
+  "summary": "A short description of TribunaGraph.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/svyatoslav-reshetnikov/TribunaGraph",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "svyatoslav-reshetnikov": "svyatoslav.reshetnikov@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/svyatoslav-reshetnikov/TribunaGraph.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TribunaGraph/Classes/**/*"
+}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TribunaGraph
 
 class ViewController: UIViewController {
 

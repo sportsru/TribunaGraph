@@ -1,0 +1,6 @@
+framework module TribunaGraph {
+  umbrella header "TribunaGraph-umbrella.h"
+
+  export *
+  module * { export * }
+}
