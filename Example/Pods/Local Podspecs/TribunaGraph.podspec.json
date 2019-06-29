@@ -1,22 +1,24 @@
 {
   "name": "TribunaGraph",
   "version": "0.1.0",
-  "summary": "A short description of TribunaGraph.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/svyatoslav-reshetnikov/TribunaGraph",
+  "summary": "TribunaGraph is an easy-to-use library for forming GraphQL requests.",
+  "homepage": "https://github.com/sportsru/TribunaGraph",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "svyatoslav-reshetnikov": "svyatoslav.reshetnikov@gmail.com"
+    "Tribuna Digital": "reshetnikovreshetnikov@sports.ru"
   },
   "source": {
-    "git": "https://github.com/svyatoslav-reshetnikov/TribunaGraph.git",
+    "git": "https://github.com/sportsru/TribunaGraph.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "TribunaGraph/Classes/**/*"
+  "swift_versions": "4.0",
+  "source_files": "TribunaGraph/Classes/**/*",
+  "frameworks": "Foundation",
+  "swift_version": "4.0"
 }

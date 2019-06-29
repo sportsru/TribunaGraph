@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TribunaGraph: 6f492eb9cfd5b44e8c3ccd41ef5fe23395dde7e8
+  TribunaGraph: 2a619d3eeea7ccbd25c272ef4a36cb73a61c0bf4
 
 PODFILE CHECKSUM: b1c2d9d004bbf31526a6c2f737dbe4a86eec417c
 

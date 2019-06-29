@@ -6,23 +6,23 @@
 //  Copyright © 2018 Tribuna Digital. All rights reserved.
 //
 
-typealias FieldBlock = (Graph.FieldBuilder) -> Void
+public typealias FieldBlock = (Graph.FieldBuilder) -> Void
 typealias CursorBlock = (Graph.CursorSelectionBuilder) -> Void
 typealias NodeBlock = (Graph.NodeBuilder) -> Void
 
-class Graph {
+public class Graph {
 
     // MARK: - Properties
     private var document: Document!
     internal static var variables: Variables = Variables()
 
     // MARK: - Init
-    init(builder: (Graph) -> Void) {
+    public init(builder: (Graph) -> Void) {
         builder(self)
     }
 
     // MARK: - Functions
-    func request(type: OperationType, name: String? = nil, _ builder: FieldBlock) {
+    public func request(type: OperationType, name: String? = nil, _ builder: FieldBlock) {
         guard let set = try? Graph.createSelectionSet(type.rawValue, fieldBlock: builder) else {
             return
         }
@@ -53,7 +53,7 @@ class Graph {
         return document.toString(format: .json, previousLevel: 0)
     }
 
-    func requestQueryString() -> String {
+    public var queryString: String {
         return document.operation.toString(format: .normal, previousLevel: 0)
     }
 
@@ -65,18 +65,18 @@ class Graph {
         return document.operation.name
     }
 
-    class FieldBuilder {
+    public class FieldBuilder {
         var fields = [Field]()
 
-        func fieldObject(_ name: String, args: [String: Any]? = nil, builder: @escaping FieldBlock) {
+        public func fieldObject(_ name: String, args: [String: Any]? = nil, builder: @escaping FieldBlock) {
             addField(name: name, args: args, builder: builder)
         }
 
-        func field(_ name: String, args: [String: Any]? = nil, builder: FieldBlock? = nil) {
+        public func field(_ name: String, args: [String: Any]? = nil, builder: FieldBlock? = nil) {
             addField(name: name, args: args, builder: builder)
         }
 
-        func fragment(name: String) throws {
+        public func fragment(name: String) throws {
             guard let fragment = fragments[name] else {
                 throw Exception.noSuchFragment("No fragment named \"\(name)\" has been defined.")
             }

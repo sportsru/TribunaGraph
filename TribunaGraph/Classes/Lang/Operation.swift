@@ -37,7 +37,7 @@ internal class Operation: GraphQLNode {
 
 }
 
-enum OperationType: String {
+public enum OperationType: String {
     case query
     case mutation
     case subscription
