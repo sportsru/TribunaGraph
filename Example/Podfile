@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TribunaGraph_Example' do
+  pod 'TribunaGraph', :path => '../'
+
+  target 'TribunaGraph_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
