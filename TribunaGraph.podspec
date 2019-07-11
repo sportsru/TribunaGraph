@@ -28,15 +28,9 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/sportsru/TribunaGraph.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
-  s.swift_version = "4.0"
+  s.swift_version = "5.0"
 
   s.source_files = 'TribunaGraph/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'TribunaGraph' => ['TribunaGraph/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
