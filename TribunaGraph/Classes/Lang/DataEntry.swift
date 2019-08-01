@@ -80,7 +80,7 @@ class StringData: DataEntry {
     private let value: String
 
     init(_ value: String) {
-        self.value = value
+        self.value = value.replacingOccurrences(of: "\\", with: "\\\\")
     }
 
     func toString(format: PrintFormat) -> String {
