@@ -80,7 +80,11 @@ class StringData: DataEntry {
     private let value: String
 
     init(_ value: String) {
-        self.value = value.replacingOccurrences(of: "\\", with: "\\\\")
+        let eventData = try? JSONSerialization.data(withJSONObject: [value], options: [])
+        var string = String(data: eventData ?? Data(), encoding: .utf8) ?? ""
+        string.removeLast(2)
+        string.removeFirst(2)
+        self.value = string
     }
 
     func toString(format: PrintFormat) -> String {
