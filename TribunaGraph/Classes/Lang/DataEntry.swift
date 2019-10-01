@@ -80,8 +80,15 @@ class StringData: DataEntry {
     private let value: String
 
     init(_ value: String) {
-        let eventData = try? JSONSerialization.data(withJSONObject: [value], options: [])
-        var string = String(data: eventData ?? Data(), encoding: .utf8) ?? ""
+        let eventData: Data?
+        var string: String
+        if #available(iOS 13.0, *) {
+            eventData = try? JSONSerialization.data(withJSONObject: [value], options: [.withoutEscapingSlashes])
+            string = String(data: eventData ?? Data(), encoding: .utf8) ?? ""
+        } else {
+            eventData = try? JSONSerialization.data(withJSONObject: [value], options: [])
+            string = String(data: eventData ?? Data(), encoding: .utf8)?.replacingOccurrences(of: "\\/", with: "/") ?? ""
+        }
         string.removeLast(2)
         string.removeFirst(2)
         self.value = string
